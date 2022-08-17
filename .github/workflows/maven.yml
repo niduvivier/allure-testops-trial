@@ -29,6 +29,7 @@ jobs:
     - name: Allure EE uploader
       uses: simple-elf/allurectl-action@v1.4
       with:
+        allure_results: target/allure-results
         allure_ee_endpoint: https://qabotics.testops.cloud/
         # Allure EE token
         allure_ee_token: a5d6994f-c3b9-450b-bae7-5fd4b3e14c66
