@@ -24,5 +24,15 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+    - name: Tests
+      run: mvn test
+    - name: Allure EE uploader
+      uses: simple-elf/allurectl-action@v1.4
+      with:
+        allure_ee_endpoint: https://qabotics.testops.cloud/
+        # Allure EE token
+        allure_ee_token: a5d6994f-c3b9-450b-bae7-5fd4b3e14c66
+        # Allure EE project id
+        project_id: 1
     - name: Build with Maven
       run: mvn -B package --file pom.xml
