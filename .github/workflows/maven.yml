@@ -25,9 +25,7 @@ jobs:
     - name: Tests
       run: mvn test
     - name: Where am I ?
-      run: ls
-    - name: Where is workspace ?
-      run: ls /github/workspace
+      run: ls target
     - name: Allure EE uploader
       uses: simple-elf/allurectl-action@v1.4
       with:
