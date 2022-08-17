@@ -26,6 +26,8 @@ jobs:
         cache: maven
     - name: Tests
       run: mvn test
+    - name: Where am I ?
+      run: ls
     - name: Allure EE uploader
       uses: simple-elf/allurectl-action@v1.4
       with:
